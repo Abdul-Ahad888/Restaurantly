@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturauntly</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./WOW-master/css/libs/animate.css">
+
+    <style>
+        .book-cus-btn {
+            border: 2px solid #cda45e;
+            border-radius: 15px;
+            color: rgb(0, 0, 0);
+            padding: 5px 30px;
+            background-color: rgba(0, 0, 0, 0);
+            transition: all 0.8s ease;
+            color: white;
+        }
+
+        .book-cus-btn:hover {
+            background-color: #cda45e;
+            color: black;
+        }
+
+        .bg-cus-black {
+            background-color: rgba(0, 0, 0, 0.308) !important;
+        }
+
+        .bg-cus-yellow {
+            background-color: #cda45e;
+        }
+
+        .color-cus-yellow {
+            color: #cda45e;
+        }
+
+        .sec-1 {
+            background: url(https://img.freepik.com/premium-photo/photo-closeup-shot-delicious-food_829042-89.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 880px;
+            background-attachment: fixed;
+
+        }
+
+        .nav-link:hover {
+            color: #cda45e !important;
+        }
+
+        .position-cus-sticky {
+            position: sticky !important;
+            top: 0;
+            z-index: 100;
+        }
+
+        .padding-cus-320 {
+            padding-top: 320px;
+        }
+
+        .sec-2 {
+            background-image: url(https://www.insidehook.com/wp-content/uploads/2022/09/chicagonewrestohead.jpg?fit=1500%2C1000);
+            background-repeat: no-repeat;
+            height: 750px;
+            background-size: cover;
+            top: 0px;
+            left: 0px;
+            position: relative;
+            background-attachment: fixed;
+
+        }
+
+        .sec-2::before {
+            content: "";
+            background: rgba(0, 0, 0, 0.75);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .margin-cus {
+            margin-top: -120px;
+        }
+
+        .con-cus-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .margin-cus-150px {
+            margin-top: 150px;
+        }
+
+        .image-cus-trans {
+            transition: 1s;
+        }
+
+        .image-cus-trans:hover {
+            transform: scale(1.1);
+
+        }
+
+        .cus-line::after {
+            content: "";
+            height: 1px;
+            width: 120px;
+            display: inline-block;
+            background-color: #c9c9c9;
+            margin: 4px 10px;
+        }
+
+        .postion-cus-p {
+            position: relative;
+            bottom: 28px;
+            left: 75px;
+        }
+
+        .sec-5 .nav-link {
+            background-color: transparent !important;
+        }
+
+        .sec-5 .nav-link.active {
+            background-color: #cda45e !important;
+            color: black !important;
+        }
+
+        .tab {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .sec-6 {
+            background-image: url(https://www.discoverhongkong.com/ca/explore/dining/buffet-for-every-occasion.thumb.800.480.png?ck=1616557960);
+            min-height: 700px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-attachment: fixed;
+
+        }
+
+        .sec-6::before {
+            content: "";
+            background: rgb(0, 0, 0, 0.75);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 21;
+        }
+
+        /*  Carousel  */
+
+        .slider-container {
+            display: flex;
+            overflow: hidden;
+            transition: transform 0.5s ease-in-out;
+            position: relative;
+            z-index: 24;
+        }
+
+        .z-index-cus {
+            position: relative;
+            z-index: 24;
+        }
+
+        .slider-slide {
+            flex: 0 0 100%;
+            display: flex;
+            width: 100%;
+
+        }
+
+        .image,
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .img-cus-gallery {
+            transition: 0.9s all ease;
+
+        }
+
+        .img-cus-gallery:hover {
+            transform: scale(1.1);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chef-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .chef-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .social-icon {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+
+
+        @media screen and (max-width : 762px) {
+            .font-cus-mdless {
+                font-size: 20px;
+            }
+
+            .font-p-cus-mdless {
+                font-size: 14px;
+            }
+
+            .margin-cus-mdless {
+                margin-top: 0px !important;
+            }
+
+            .text {
+                flex: none !important;
+            }
+
+            .book-cus-btn {
+                width: 55% !important;
+            }
+
+            .newsletter{
+                padding: 0px !important;
+                margin: 0px !important;
+            }
+
+            .newsletter input{
+                position: static !important;
+               width: 100% !important;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mb-0 mb-md-2 bg-cus-black">
+        <div class="container">
+            <div class="pt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-phone color-cus-yellow" viewBox="0 0 16 16">
+                    <path
+                        d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>
+                <span class="text-light">
+                    +1 5589 55488 55
+                </span>
+                <span class="mx-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-clock color-cus-yellow" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                    </svg>
+                    <span class="text-light">
+                        Mon-Sat: 11AM - 23PM
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-cus-black border-bottom border-2 border-dark position-cus-sticky">
+        <div class="container">
+            <a class="navbar-brand fs-2 fw-semibold text-uppercase text-light" href="#">Resturauntly</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#about-us">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#menu">Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#special">Specials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#event">Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#chef">Chefs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Drop Down
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="book-cus-btn d-none d-md-block">
+                Book A Table
+            </button>
+        </div>
+    </nav>
+    <section class="sec-1 margin-cus">
+        <div class="wow fadeInDownBig container padding-cus-320 text-center text-md-start">
+            <h1 class="text-uppercase text-white">
+                Welcome To <span class="color-cus-yellow"> Resturauntly </span>
+            </h1>
+            <p class="text-white fs-4">Delivering great food for more than 18 years!</p>
+            <button class="book-cus-btn">Our Menu</button>
+            <button class="book-cus-btn mt-4 mx-2">Book A Table</button>
+        </div>
+    </section>
+    <section id="about-us" class="sec-2">
+        <div class="container con-cus-content text-white">
+            <div class="row">
+                <div class="wow bounceInDown col-12 col-md-6 mt-md-5 pt-md-5 order-2 margin-cus-mdless">
+                    <h3 class="font-cus-mdless">They provide for the most worthy pleasures, as if the pleasures of the
+                        body were to be assumed.
+                    </h3>
+                    <p class="fst-italic">It is important to take care of the patient, to be followed by the patient,
+                        but it will happen at
+                        such a time that there is a lot of work and pain.</p>
+                    <div>
+                        <p class="text-white m-0 m-md-2"><span class="color-cus-yellow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-check-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                </svg></span> I do not work at all except to get some advantage out of it.</p>
+                    </div>
+                    <div>
+                        <p class="text-white m-0 m-md-2"><span class="color-cus-yellow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-check-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                </svg></span> Doubts or irrure pain in reprimands in the pleasure he wants.</p>
+                    </div>
+                    <div>
+                        <p class="text-whit m-0 m-md-2"><span class="color-cus-yellow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-check-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                                </svg></span> I do not work at all except to get some advantage out of it. Dus austere
+                            irrure pain in reprehendit in pleasure tridetas storacalaperda mastir pain eu fu una brevet.
+                        </p>
+                    </div>
+                    <h5 class="font-p-cus-mdless fw-normal margin-cus-mdless mt-3">I do not work at all except to get
+                        some advantage out of it. Do not be angry with the pain in the
+                        reprimand in the pleasure he wants to be a hair from the pain in the hope that there is no
+                        breeding. Unless they are blinded by lust.</h5>
+                </div>
+                <div class="wow flipInX col-12 col-md-6 mt-md-5 pt-md-5 order-1 order-md-2">
+                    <img class="img-fluid image-cus-trans w-100 border border-4 border-secondary"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/about.jpg"
+                        alt="NO IMAGE FOUND">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #0c0b09;" class="sec-3 pb-5">
+        <div class="container">
+            <h6 class="text-light pt-5 cus-line">WHY US</h6>
+            <h1 class="color-cus-yellow pb-4">Why Choose Our Restaurant</h1>
+            <div class="row">
+                <div style="background-color: #1a1814; border: 5px solid #0c0b09;"
+                    class="wow fadeInUpBig col-12 col-md-4 py-5 px-4 sec-3-box-bg-color sec-3-box-bg-color">
+                    <h2 class="color-cus-yellow">01</h2>
+                    <h2 class="text-white">Lorem Ipsum</h2>
+                    <p class="text-secondary">I do not work unless I get some benefit from it. And we will follow it,
+                        but it will please us</p>
+                </div>
+                <div style="background-color: #1a1814; border: 5px solid #0c0b09;"
+                    class="wow fadeInDownBig col-12 col-md-4 py-5 px-4 sec-3-box-bg-color sec-3-box-bg-color">
+                    <h2 class="color-cus-yellow">02</h1>
+                        <h2 class="text-white">It repels nothing</h2>
+                        <p class="text-secondary">He wants to be blinded by the pleasure of avoiding pain. Sayings of
+                            the truth, the pain that even the dire leno prepare dest</p>
+                </div>
+                <div style="background-color: #1a1814; border: 5px solid #0c0b09;"
+                    class="wow fadeInUpBig col-12 col-md-4 py-5 px-4 sec-3-box-bg-color sec-3-box-bg-color">
+                    <h2 class="color-cus-yellow">03</h2>
+                    <h2 class="text-white">Who wants to</h2>
+                    <p class="text-secondary">The troubles of the offices are all the more severe than that. Either the
+                        pains of life are owed to someone or something</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menu" style="background-color: #1a1814;" class="sec-4 pb-5">
+        <div class="wow bounceInDown container">
+            <h5 class="text-light pt-5 cus-line">MENU</h5>
+            <h1 class="color-cus-yellow">Check Our Tasty Menu</h1>
+            <div class="row pt-5">
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px;" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Lob Bisque</a>
+                            <p class="text-secondary mx-2 postion-cus-p">Lorem, deren, trataro, filede, nerada</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-4 mb-4">$5.95</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/bread-barrel.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Bread Barel</a>
+                            <p class="text-secondary mx-2 postion-cus-p">Lorem, deren, trataro, filede, nerada</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-4 mb-4">$6.65</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/cake.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Crab Cake</a>
+                            <p class="text-secondary mx-2 postion-cus-p">A delicate crab cake served on a toasted roll
+                                with lettuce and <br> tartar sauce</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-5 mb-5 pb-md-4">$7.95</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/caesar.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Caesar</a>
+                            <p class="text-secondary mx-2 postion-cus-p">Lorem, deren, trataro filede, nerada</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-4 mb-4">$8.95</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/tuscan-grilled.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Tuscan Grill</a>
+                            <p class="text-secondary mx-2 postion-cus-p">Grilled chicken with provolone, artichoke
+                                hearts, and pesto</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-5 mb-5 pb-md-4">$9.95</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/mozzarella.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Mozzarella</a>
+                            <p class="text-secondary mx-2 postion-cus-p">Lorem, deren, trataro, filede, nerada</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-4 mb-4">$4.95</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/greek-salad.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Gree Salad</a>
+                            <p class="text-secondary mx-2 postion-cus-p">Fresh spinach, crisp romaine, tomatoes, and
+                                olives</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-4 mb-4">$9.95</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/spinach-salad.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Mexi Salad</a>
+                            <p class="text-secondary mx-2 postion-cus-p">Fresh spinach with mushrooms, hard boiled egg,
+                                a vinaigrette</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-5 mb-5 pb-md-4">$9.95</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-3 ">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div style=" display: inline-block;">
+                            <img style="width: 70px" class="img-fluid rounded rounded-circle"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-roll.jpg"
+                                alt="">
+                            <a style="text-decoration: none; display: inline-block;" class="text-light fs-5 mx-2"
+                                href="#">Lob Roll</a>
+                            <p class="text-secondary mx-2 postion-cus-p">Plump lobster meat, mayo and crisp lettuce on a
+                                toasted roll</p>
+                        </div>
+                        <span class="color-cus-yellow fs-5 pb-4 mb-5">$12.95</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="special" style="background-color: #0c0b09;" class="sec-5 pb-5">
+        <div class="wow bounceInDown container">
+            <h5 class="text-light pt-5 cus-line">Specials</h5>
+            <h1 class="color-cus-yellow">Check Our Specials</h1>
+            <div class="row">
+                <div class="col-12 col-md-3 mt-4" style="border-right: 4px solid #cda45e;">
+                    <ul class="nav nav-link flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" style="padding: 15px;" aria-current="page"
+                                href="javascript:void(0);" onclick="showTab(1)">Modi sit est</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" style="padding: 15px;" href="javascript:void(0);"
+                                onclick="showTab(2)">Unde praesentium sed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" style="padding: 15px;" href="javascript:void(0);"
+                                onclick="showTab(3)">Pariatur explicabo vel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" style="padding: 15px;" href="javascript:void(0);"
+                                onclick="showTab(4)">Nostrum qui quasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" style="padding: 15px;" href="javascript:void(0);"
+                                onclick="showTab(5)">Iusto ut expedita aut</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div id="tab-1" class="tab-content tab" onclick="showTab(1)">
+                        <div class="row">
+                            <div class="col-12 col-md-9">
+                                <div class="p-4">
+                                    <h2 class="text-white">Architecto ut aperiam autem id</h2>
+                                    <p class="text-secondary">
+                                        Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a
+                                        videna mareta paulona marka
+                                        <br><br>
+                                        Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum
+                                        eos ipsum ipsa
+                                        odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius
+                                        et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus
+                                        nostrum rem vero
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <img class="img-fluid"
+                                    src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/specials-1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- The Tab-2 Starts From Here -->
+                    <div id="tab-2" class="tab-content tab" onclick="showTab(2)">
+                        <div class="row">
+                            <div class="col-12 col-md-9">
+                                <div class="p-4">
+                                    <h2 class="text-white">Et blanditiis nemo veritatis excepturi</h2>
+                                    <p class="text-secondary">
+                                        Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a
+                                        videna mareta paulona marka
+                                        <br><br>
+                                        Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et
+                                        reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit
+                                        ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna
+                                        desera vafle de nideran pal
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <img class="img-fluid"
+                                    src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/specials-2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- The Tab-3 Starts From Here -->
+                    <div id="tab-3" class="tab-content tab" onclick="showTab(3)">
+                        <div class="row">
+                            <div class="col-12 col-md-9">
+                                <div class="p-4">
+                                    <h2 class="text-white">Impedit facilis occaecati odio neque aperiam sit
+                                    </h2>
+                                    <p class="text-secondary">
+                                        Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus
+                                        non sunt dicta dolor et. In asperiores velit quaerat perferendis aut
+                                        <br><br>
+                                        Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis
+                                        quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae
+                                        sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et
+                                        harum voluptatem optio quae
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <img class="img-fluid"
+                                    src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/specials-3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- The Tab-4 Starts From Here -->
+                    <div id="tab-4" class="tab-content tab" onclick="showTab(4)">
+                        <div class="row">
+                            <div class="col-12 col-md-9">
+                                <div class="p-4">
+                                    <h2 class="text-white">Fuga dolores inventore laboriosam ut est accusamus laboriosam
+                                        dolore</h2>
+                                    <p class="text-secondary">
+                                        Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis
+                                        delectus
+                                        <br><br>
+                                        Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam
+                                        necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in
+                                        consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a
+                                        laborum inventore
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <img class="img-fluid"
+                                    src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/specials-4.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- The Tab-5 Starts From Here -->
+                    <div id="tab-5" class="tab-content tab" onclick="showTab(5)">
+                        <div class="row">
+                            <div class="col-12 col-md-9">
+                                <div class="p-4">
+                                    <h2 class="text-white">Est eveniet ipsam sindera pad rone matrelat sando reda</h2>
+                                    <p class="text-secondary">
+                                        Omnis blanditiis saepe eos autem qui sunt debitis porro quia.
+                                        <br><br>
+                                        Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae
+                                        ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet.
+                                        Occaecati sed est sint aut vitae molestiae voluptate vel
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <img class="img-fluid"
+                                    src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/specials-5.png">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="event" class="sec-6 pt-4">
+        <div class="wow bounceInDown container z-index-cus">
+            <h5 class="text-light pt-5 cus-line">Events</h5>
+            <h1 class="color-cus-yellow">Organize Your Events in our Restaurant</h1>
+        </div>
+        <div class="wow bounceInDown container slider-container">
+            <div class="row slider-slide">
+                <div class="col-12 col-md-6 image">
+                    <img class="img-fluid"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-private.jpg"
+                        alt="Event 1">
+                </div>
+                <div class="col-12 col-md-6 text text-white">
+                    <h2 class="color-cus-yellow">Private Parties</h2>
+                    <h3 style="border-bottom: #cda45e 2px solid;" class="d-inline-block">$290</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quo ut nulla voluptatibus omnis
+                        magni expedita atque ipsum pariatur minus.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusamus omnis vitae corporis
+                        cumque ipsum atque voluptates unde!</p>
+                </div>
+            </div>
+            <div class="row slider-slide">
+                <div class="col-12 col-md-6 image">
+                    <img class="img-fluid"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-custom.jpg"
+                        alt="Event 2">
+                </div>
+                <div class="col-12 col-6 text text-white">
+                    <h2 class="color-cus-yellow">Custom Parties</h2>
+                    <h3 style="border-bottom: #cda45e 2px solid;" class="d-inline-block">$99</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quo ut nulla voluptatibus omnis
+                        magni expedita atque ipsum pariatur minus.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusamus omnis vitae corporis
+                        cumque ipsum atque voluptates unde!</p>
+                </div>
+            </div>
+            <div class="row slider-slide">
+                <div class="col-12 col-md-6 image">
+                    <img class="img-fluid"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/event-birthday.jpg"
+                        alt="Event 2">
+                </div>
+                <div class="col-12 col-md-6 text text-white">
+                    <h2 class="color-cus-yellow">Brithday Parties</h2>
+                    <h3 style="border-bottom: #cda45e 2px solid;" class="d-inline-block">$180</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quo ut nulla voluptatibus omnis
+                        magni expedita atque ipsum pariatur minus.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="ps-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusamus omnis vitae corporis
+                        cumque ipsum atque voluptates unde!</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section style="background-color: #0c0b09;" class="sec-7 pb-5">
+        <div class="wow bounceInUp container">
+            <h5 class="text-light pt-5 cus-line">RESERVATION</h5>
+            <h1 class="color-cus-yellow">Book a Table</h1>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <input class="p-2 w-100 mt-3 text-white"
+                        style="border: 1px #77613c solid; background-color: transparent;" type="text"
+                        placeholder="Your Name">
+                </div>
+                <div class="col-12 col-md-4">
+                    <input class="p-2 w-100 mt-3 text-white"
+                        style="border: 1px #77613c solid; background-color: transparent;" type="email"
+                        placeholder="Your Email">
+                </div>
+                <div class="col-12 col-md-4">
+                    <input class="p-2 w-100 mt-3 text-white"
+                        style="border: 1px #77613c solid; background-color: transparent;" type="text"
+                        placeholder="Your Phone#">
+                </div>
+                <div class="col-12 col-md-4">
+                    <input class="p-2 w-100 mt-3 text-white"
+                        style="border: 1px #77613c solid; background-color: transparent;" type="text"
+                        placeholder="Date">
+                </div>
+                <div class="col-12 col-md-4">
+                    <input class="p-2 w-100 mt-3 text-white"
+                        style="border: 1px #77613c solid; background-color: transparent;" type="text"
+                        placeholder="Time">
+                </div>
+                <div class="col-12 col-md-4">
+                    <input class="p-2 w-100 mt-3 text-white"
+                        style="border: 1px #77613c solid; background-color: transparent;" type="number"
+                        placeholder="# Of People">
+                </div>
+                <div class="col-12">
+                    <textarea class="w-100 mt-3 px-2 py-1 text-white"
+                        style="border: 1px #77613c solid; background-color: transparent;" name="" id="" cols="" rows="5"
+                        placeholder="Message"></textarea>
+                </div>
+                <button class="book-cus-btn w-25 m-auto mt-3 p-3">
+                    Book A Table
+                </button>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #1a1814;" class="sec-8 pb-5">
+        <div class="wow bounceInDown container">
+            <h5 class="text-light pt-5 cus-line">TESTIMONIALS</h5>
+            <h1 class="color-cus-yellow">What they're saying about us</h1>
+            <div class="owl-carousel row mt-5">
+                <div class="item col-md-11">
+                    <div class="testi-text text-white rounded rounded-3 p-3 pb-5"
+                        style="background-color: rgb(44, 40, 32);">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, quaerat. Lorem ipsum dolor sit
+                        amet consectetur, adipisicing elit. Temporibus, accusantium! Libero, quaerat. Lorem ipsum dolor
+                        sit.
+                    </div>
+                    <div class="testi-img">
+                        <img class="img-fluid rounded rounded-circle w-25 border border-5 border-secondary"
+                            style="position: relative; bottom: 40px; left: 20px;"
+                            src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/testimonials/testimonials-3.jpg"
+                            alt="">
+                        <h5 class="text-white mx-4">Jena Karlis</h5>
+                        <h6 class="text-secondary mx-4">Store Owner</h6>
+                    </div>
+                </div>
+                <div class="item col-md-11">
+                    <div class="testi-text text-white rounded rounded-3 p-3 pb-5"
+                        style="background-color: rgb(44, 40, 32);">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, quaerat. Lorem ipsum dolor sit
+                        amet consectetur, adipisicing elit. Temporibus, accusantium! Libero, quaerat. Lorem ipsum dolor
+                        sit.
+                    </div>
+                    <div class="testi-img">
+                        <img class="img-fluid rounded rounded-circle w-25 border border-5 border-secondary"
+                            style="position: relative; bottom: 40px; left: 20px;"
+                            src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/testimonials/testimonials-4.jpg"
+                            alt="">
+                        <h5 class="text-white mx-4">Matt Brandon</h5>
+                        <h6 class="text-secondary mx-4">Freelancer</h6>
+                    </div>
+                </div>
+                <div class="item col-md-11">
+                    <div class="testi-text text-white rounded rounded-3 p-3 pb-5"
+                        style="background-color: rgb(44, 40, 32);">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, quaerat. Lorem ipsum dolor sit
+                        amet consectetur, adipisicing elit. Temporibus, accusantium! Libero, quaerat. Lorem ipsum dolor
+                        sit.
+                    </div>
+                    <div class="testi-img">
+                        <img class="img-fluid rounded rounded-circle w-25 border border-5 border-secondary"
+                            style="position: relative; bottom: 40px; left: 20px;"
+                            src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/testimonials/testimonials-5.jpg"
+                            alt="">
+                        <h5 class="text-white mx-4">Jhon Larson</h5>
+                        <h6 class="text-secondary mx-4">Entrepreneur</h6>
+                    </div>
+                </div>
+                <div class="item col-12 col-md-11">
+                    <div class="testi-text text-white rounded rounded-3 p-3 pb-5"
+                        style="background-color: rgb(44, 40, 32);">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, quaerat. Lorem ipsum dolor sit
+                        amet consectetur, adipisicing elit. Temporibus, accusantium! Libero, quaerat. Lorem ipsum dolor
+                        sit.
+                    </div>
+                    <div class="testi-img">
+                        <img class="img-fluid rounded rounded-circle w-25 border border-5 border-secondary"
+                            style="position: relative; bottom: 40px; left: 20px;"
+                            src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/testimonials/testimonials-2.jpg"
+                            alt="">
+                        <h5 class="text-white mx-4">Zara Willholmes</h5>
+                        <h6 class="text-secondary mx-4">Designer</h6>
+                    </div>
+                </div>
+                <div class="item col-12 col-md-11">
+                    <div class="testi-text text-white rounded rounded-3 p-3 pb-5"
+                        style="background-color: rgb(44, 40, 32);">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, quaerat. Lorem ipsum dolor sit
+                        amet consectetur, adipisicing elit. Temporibus, accusantium! Libero, quaerat. Lorem ipsum dolor
+                        sit.
+                    </div>
+                    <div class="testi-img">
+                        <img class="img-fluid rounded rounded-circle w-25 border border-5 border-secondary"
+                            style="position: relative; bottom: 40px; left: 20px;"
+                            src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/testimonials/testimonials-1.jpg"
+                            alt="">
+                        <h5 class="text-white mx-4">Solomon</h5>
+                        <h6 class="text-secondary mx-4">Ceo & Founder</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" style="background-color: #0c0b09;" class="sec-9 pb-5">
+        <div class="wow bounceInDown container">
+            <h5 class="text-light pt-5 cus-line">GALLERY</h5>
+            <h1 class="color-cus-yellow">Some photos from Our Restaurant</h1>
+            <div class="row mt-5">
+                <div class="col-12 col-md-3">
+                    <img class="img-cus-gallery img-fluid border border-2 border-secondary mb-4"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-1.jpg"
+                        alt="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <img class="img-cus-gallery img-fluid border border-2 border-secondary mb-4"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-2.jpg"
+                        alt="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <img class="img-cus-gallery img-fluid border border-2 border-secondary mb-4"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-3.jpg"
+                        alt="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <img class="img-cus-gallery img-fluid border border-2 border-secondary mb-4"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-4.jpg"
+                        alt="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <img class="img-cus-gallery img-fluid border border-2 border-secondary mb-4"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-5.jpg"
+                        alt="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <img class="img-cus-gallery img-fluid border border-2 border-secondary mb-4"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-6.jpg"
+                        alt="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <img class="img-cus-gallery img-fluid border border-2 border-secondary mb-4"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-7.jpg"
+                        alt="">
+                </div>
+                <div class="col-12 col-md-3">
+                    <img class="img-cus-gallery img-fluid border border-2 border-secondary mb-4"
+                        src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-8.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="chef" style="background-color: #0c0b09;" class="sec-10 pb-5">
+        <div class="container">
+            <h5 class="text-light pt-5 cus-line">CHEFS</h5>
+            <h1 class="color-cus-yellow">Our Proffesional Chefs</h1>
+            <div class="row mt-5">
+                <div class="wow rotateInDownLeft col-12 col-md-4 mt-2">
+                    <div class="chef-card">
+                        <div class="image-container">
+                            <img class="img-cus-chef img-fluid"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/chefs/chefs-1.jpg"
+                                alt="">
+                            <div class="overlay">
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center fs-5">
+                            <h3 class="text-white pt-2">Walter White</h3>
+                            <h5 class="text-secondary">Master Chef</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="wow rotateIn col-12 col-md-4 mt-2">
+                    <div class="chef-card">
+                        <div class="image-container">
+                            <img class="img-cus-chef img-fluid"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/chefs/chefs-2.jpg"
+                                alt="">
+                            <div class="overlay">
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-white pt-2">Sarah</h3>
+                            <h5 class="text-secondary">Patissier</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="wow rotateInDownRight col-12 col-md-4 mt-2">
+                    <div class="chef-card">
+                        <div class="image-container">
+                            <img class="img-cus-chef img-fluid"
+                                src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/chefs/chefs-3.jpg"
+                                alt="">
+                            <div class="overlay">
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon" style="position: relative; top: 170px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-white pt-2">William Anderson</h3>
+                            <h5 class="text-secondary">Cook</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" style="background-color: #0c0b09;" class="sec-11 pb-5">
+        <div class="container-fluid">
+            <h5 class="text-light pt-5 cus-line">Contact</h5>
+            <h1 class="color-cus-yellow">Contact Us</h1>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <iframe
+                        src="https://maps.google.com/maps?q=ui%20learning&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                        frameborder="0" scrolling="no" style="width: 100%; height: 400px;"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="wow bounceInUp container">
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <!-- Left side with 4 columns and icons in the same line as heading -->
+                    <div class="column d-flex align-items-baseline">
+                        <i style="background-color: #cda45e;" class="mx-2 rounded rounded-5 p-3 fa fa-map-marker"></i>
+                        <div>
+                            <h4 class="mb-0 text-white">Location</h4>
+                            <p class="text-secondary">123 Main St, City</p>
+                        </div>
+                    </div>
+                    <div class="column d-flex align-items-baseline">
+                        <i style="background-color: #cda45e;" class="mx-2 rounded rounded-5 p-3 fa fa-phone"></i>
+                        <div>
+                            <h4 class="mb-0 text-white">Phone</h4>
+                            <p class="text-secondary">(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="column d-flex align-items-baseline">
+                        <i style="background-color: #cda45e;" class="mx-2 rounded rounded-5 p-3 fa fa-envelope"></i>
+                        <div>
+                            <h4 class="mb-0 text-white">Email</h4>
+                            <p class="text-secondary">contact@example.com</p>
+                        </div>
+                    </div>
+                    <div class="column d-flex align-items-baseline">
+                        <i style="background-color: #cda45e;" class="mx-2 rounded rounded-5 p-3 fa fa-clock"></i>
+                        <div>
+                            <h4 class="mb-0 text-white">Opening Hours</h4>
+                            <p class="text-secondary">Mon-Fri: 4:00 PM - 12:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Right side with a form -->
+                    <form class="row">
+                        <input style="background-color: transparent; border: 1px solid #77613c"
+                            class="col-12 col-md-6 p-2 mb-3" type="text" placeholder="Your Name">
+                        <input style="background-color: transparent; border: 1px solid #77613c"
+                            class="col-12 col-md-6 p-2 mb-3" type="email" placeholder="Your Email">
+                        <input style="background-color: transparent; border: 1px solid #77613c" class="col-12 p-2 mb-3"
+                            type="text" placeholder="Subject">
+                        <textarea style="background-color: transparent;  border: 1px solid #77613c; height: 110px;"
+                            class="col-12 p-2 mb-3" placeholder="Your Message"></textarea>
+                        <div class="text-center">
+                            <button type="submit" class="book-cus-btn w-100">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5" style="color: #77613c;">
+    </section>
+    <section style="background-color: #0c0b09;" class="sec-12 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <h2 class="text-white fw-normal text-uppercase">Restaurantly</h2>
+                    <h6 class="text-light">A108 Adam Street</h6>
+                    <h6 class="text-light">NY 535022, USA</h6><br>
+                    <h6 class="text-light">Phone: +1 5589 55488 55</h6>
+                    <h6 class="text-light">Email: info@example.com</h6>
+                    <i style="font-size: 25px; color: #1DA1F2;" class="mx-1 fab fa-twitter"></i>
+                    <i style="font-size: 25px; color: #1877F2;" class="mx-1 fab fa-facebook"></i>
+                    <i style="font-size: 25px; color: #E4405F;" class="mx-1 fab fa-instagram"></i>
+                    <i style="font-size: 25px; color: #0077B5;" class="mx-1 fab fa-skype"></i>
+                    <i style="font-size: 25px; color: #00AFF0;" class="mx-1 fab fa-linkedin"></i>
+
+                </div>
+                <div class="col-12 col-md-2">
+                    <h5 class="text-white">Usefull Links</h5>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Home</a><br>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">About us</a><br>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Services</a><br>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Terms & Condition</a><br>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Privacy Policy</a><br>
+                </div>
+                <div class="col-12 col-md-2">
+                    <h5 class="text-white">Our Services</h5>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Web Design</a><br>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Web Development</a><br>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Product Management</a><br>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Marketing</a><br>
+                    <span class="color-cus-yellow fw-bolder">></span>
+                    <a style="text-decoration: none;" class="text-light" href="#">Graphic Design</a><br>
+                </div>
+                <div class="col-12 col-md-4 px-5 mx-5 newsletter">
+                    <h5 class="text-white">Our Newsletter</h5><br>
+                    <p class="text-light">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <form action="">
+                        <input style="border: 1px solid #77613c; background-color: #1a1814;" class="w-75 rounded rounded-pill p-2" type="search">
+                        <input style="background-color: #cda45e; border: none; position: relative; right: 40px;" type="submit" value="Subscribe" class="btn fs-6 fw-light rounded rounded-pill p-2">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="background-color: #000000;" class="text-white p-3">
+        <br>
+        <h6 class="text-center">© Copyright Restaurantly. All Rights Reserved</h6>
+        <p class="text-center">Designed by <span class="color-cus-yellow">Abdul Ahad</span> </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./WOW-master/dist/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 3,
+                autoplay: true,
+                autoplayTimeout: 2500,
+                autoplayHoverPause: true,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 3
+                    }
+                }
+            });
+        });
+
+        const mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slider-slide');
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = 'flex';
+
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                });
+
+                event.target.classList.add("active");
+            });
+        });
+
+        function showTab(tabNumber) {
+            const tabContents = document.querySelectorAll(".tab-content");
+            tabContents.forEach((content) => {
+                content.style.display = "none";
+            });
+
+            const selectedTab = document.getElementById(`tab-${tabNumber}`);
+            selectedTab.style.display = "block";
+        }
+
+        showTab(1);
+    </script>
+</body>
+
+</html>
